@@ -1,0 +1,105 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ccb7ae;
+    margin: 0;
+    padding: 0;
+}
+
+header.navbar{
+    background-color: #a6808c;
+    overflow: hidden;
+}
+
+header.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Espaçamento igual entre os itens */
+    width: 100%;
+}
+
+header.navbar li {
+    flex-grow: 1; /* Permite que cada item cresça de maneira uniforme */
+    min-width: 100px; /* Define uma largura mínima para cada item */
+}
+
+header.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header.navbar li a:hover{ /* Mudará de cor ao passar o ponteiro do mouse por cima */
+    background-color: #706677;
+}
+
+main.container {
+    display: flex;
+    justify-content: space-around; /* Espaço ao redor dos elementos */
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+aside.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+.foto img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px; /* Borda da foto */
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+}
+
+.descricao {
+    width: 50%; /* Largura para a seção de texto */
+    padding: 20px;
+    background-color: #F1E0D6; /* Mesmo fundo para a seção de texto */
+    border-radius: 20px; /* Borda do texto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor */
+
+}
+
+.descricao h1 {
+    text-align: center; /* Centraliza o título */
+    font-size: 2rem; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+.descricao p {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    main.container {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+    }
+
+    aside.perfil, .descricao {
+        width: 90%; /* Ajuste a largura dos elementos para telas menores */
+    }
+
+    .foto img {
+        width: 80%;
+    }
+}
